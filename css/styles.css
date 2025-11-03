@@ -1,0 +1,926 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+
+/* Floating "Opening Soon" Text */
+.opening-text {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  color: gold;
+  animation: floatText 1s linear infinite alternate, blink 1s linear infinite;
+  ;
+
+}
+
+/* Blinking effect */
+@keyframes blink {
+
+  0%,
+  100% {
+    color: #8A6313;
+  }
+
+  50% {
+    color: black;
+  }
+}
+
+/* Floating effect */
+@keyframes floatText {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/*@keyframes blink {  
+  0% { color:#8A6313; }
+  100% { color: black; }
+}
+@-webkit-keyframes blink {
+  0% { color: #8A6313; }
+  100% { color: black; }
+}
+.blink {
+  -webkit-animation: blink 1s linear infinite;
+  -moz-animation: blink 1s linear infinite;
+  animation: blink 1s linear infinite;
+} 
+
+
+@keyframes floatText {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}*/
+/*.animated-text {
+  position: relative;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.2;
+}*/
+
+/*.animated-text::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffc107;
+  border-right: 2px solid #ffc107;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 6s steps(25) infinite;
+}
+*/
+.animated-text {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* “Enjoy Our” – static text */
+.static-text {
+  display: inline-block;
+}
+
+/* “Delicious Meal” – typing effect */
+.typing-text {
+  display: inline-block;
+  border-right: 3px solid #ffc107;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0ch;
+  animation: typingBackForth 5s steps(14, end) infinite alternate, blink 0.8s step-end infinite;
+  animation-delay: 0.5s;
+}
+
+/* Type forward, then backward (alternate = reverses automatically) */
+@keyframes typingBackForth {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 14ch; /* “Delicious Meal” = 14 characters including space */
+  }
+}
+
+
+/* Cursor blink animation */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+/*****animated text End*****/
+
+
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  /*background: url("../loya-interiors/loyatable6.png") no-repeat center center/cover;*/
+  display: flex;
+  color: #fff;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/background.avif") no-repeat center center/cover;
+  /*background: black;  dark overlay */
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-weight: 700;
+}
+
+.hero-section p {
+  color: #ddd;
+}
+
+/* Button Styling */
+.hero-section .btn {
+  font-weight: 600;
+  border-radius: 30px;
+}
+
+/* ---------- Slider ---------- */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: 450px;
+  margin: 0 auto;
+  /*aspect-ratio: 4 / 3;*/
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hero-slider img {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 8s ease;
+}
+
+.hero-slider img.active {
+  opacity: 1;
+  /*transform: scale(1.05);*/
+}
+
+
+/*. hero-img {
+  max-width: 100%;
+  animation: spin 20s linear infinite; rotates continuously
+}*/
+
+/*@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}*/
+
+
+
+.countdown .time {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.countdown h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.countdown p {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.stat h3 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.stat p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.btn-warning {
+  font-weight: bold;
+}
+
+/* Primary color theme */
+:root {
+  --primary-color: #8A6313;
+  --primary-hover: #6e4c0f;
+  /* darker shade for hover */
+}
+
+/* Section padding */
+.container-xxl.py-5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Section title */
+.section-title {
+  color: var(--primary-color);
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+/* Main headings */
+h1 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* Paragraph text */
+p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Font Awesome icons */
+.fa-utensils {
+  color: var(--primary-color) !important;
+}
+
+/* Stats numbers */
+.display-5.text-primary {
+  color: var(--primary-color) !important;
+}
+
+/* Stats borders */
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+/* Images */
+.img-fluid {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Stats container */
+.d-flex.align-items-center {
+  gap: 1rem;
+}
+
+/* Rounded corners for images */
+.rounded {
+  border-radius: 0.5rem;
+}
+
+/* Text alignment helpers */
+.text-start {
+  text-align: left;
+}
+
+.text-end {
+  text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+
+  .text-start,
+  .text-end {
+    text-align: center;
+  }
+
+  .col-lg-6 {
+    margin-bottom: 2rem;
+  }
+
+  .img-fluid {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .row.g-3>div {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
+/* ===============================
+   About Section Styling
+================================= */
+
+
+.about-images {
+  position: relative;
+}
+
+@keyframes slideContinuous {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.about-text .sliding-wrapper {
+  overflow: hidden; /* important: hide anything outside this container */
+  width: 100%;      /* ensures container fits inside the column */
+}
+
+.sliding-wrapper h1 {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slideContinuous 10s linear infinite;
+}
+
+/* Sliding animation */
+@keyframes slideContinuous {
+  0% {
+    transform: translateX(100%); /* start completely off the right */
+  }
+  100% {
+    transform: translateX(-100%); /* move completely off the left */
+  }
+}
+
+.graphic-shape {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background: rgba(138, 99, 19, 0.4);
+  /* Your color */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: 0.7;
+}
+
+/* Bubble Shapes */
+.shape-1 {
+  width: 80px;
+  height: 80px;
+  top: -20px;
+  left: -20px;
+  animation: bubbleFloat1 12s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 60px;
+  height: 60px;
+  top: 10%;
+  left: -30px;
+  animation: bubbleFloat2 15s ease-in-out infinite;
+}
+
+.shape-3 {
+  width: 50px;
+  height: 50px;
+  bottom: 10%;
+  right: -20px;
+  animation: bubbleFloat3 13s ease-in-out infinite;
+}
+
+.shape-4 {
+  width: 70px;
+  height: 70px;
+  bottom: -20px;
+  right: -10px;
+  animation: bubbleFloat4 14s ease-in-out infinite;
+}
+
+/* Bubble Animations */
+@keyframes bubbleFloat1 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translate(15px, -20px) scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+@keyframes bubbleFloat2 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translate(-10px, 15px) scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+@keyframes bubbleFloat3 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translate(10px, -15px) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@keyframes bubbleFloat4 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translate(-15px, 10px) scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+
+/* Section title */
+.section-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffb03b;
+  /* golden accent */
+}
+
+
+
+/* Main heading */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #0f172a;
+  /* dark text */
+}
+
+/* Paragraph text */
+.about-text p {
+  color: #6c757d;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Stats box */
+.about-stats h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffb03b;
+}
+
+.about-stats p {
+  margin: 0;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.about-stats h6 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+/* Read More button */
+.btn-warning {
+  background-color: #ffb03b;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-warning:hover {
+  background-color: #e69a23;
+  color: #fff;
+}
+
+/* Image effects */
+.about-images img {
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-images img:hover {
+  transform: scale(1.05);
+}
+
+
+/* ---------------- Carousel Controls ---------------- */
+.carousel {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  z-index: 10;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  pointer-events: auto;
+}
+
+/* Move arrows slightly out */
+.carousel-control-prev {
+  left: -30px;
+}
+
+.carousel-control-next {
+  right: -30px;
+}
+
+@media (max-width: 992px) {
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+}
+
+/* ---------------- Animated Icons Strip ---------------- */
+.animated-icons-strip {
+  background: black;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+}
+
+.scrolling-left {
+  display: flex;
+  animation: scroll-left 25s linear infinite;
+}
+
+.icons-group {
+  display: flex;
+  gap: 60px;
+  flex-shrink: 0;
+}
+
+.icons-group img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite, spin 12s linear infinite;
+}
+
+/* Scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Floating effect */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Slow rotation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.chilli-animate {
+  position: relative;
+  animation: moveDown 5s linear infinite;
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateY(-100%);
+    /* start above */
+  }
+
+  to {
+    transform: translateY(100vh);
+    /* move down beyond screen */
+  }
+}
+
+
+
+/* ===== CHEF SECTION STYLES ===== */
+#chef {
+  background: #000;
+  color: #ccc;
+  /* soft gray for base text */
+  padding: 100px 0;
+}
+
+/* Section Title */
+#chef h2 {
+  color: gold;
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#chef p.lead {
+  color: #eee;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Decorative Divider */
+.decor-divider {
+  position: relative;
+  display: inline-block;
+  margin: 15px auto 25px;
+  width: 120px;
+  height: 4px;
+  background: gold;
+  border-radius: 2px;
+}
+
+.decor-divider::before,
+.decor-divider::after {
+  content: "✦";
+  /* decorative symbol */
+  position: absolute;
+  top: -12px;
+  font-size: 1.2rem;
+  color: gold;
+}
+
+.decor-divider::before {
+  left: -20px;
+}
+
+.decor-divider::after {
+  right: -20px;
+}
+
+/* Chef Image */
+#chef .chef-image img {
+  border: 6px solid #8A6313;
+  /* deep gold-brown frame */
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  max-width: 260px;
+}
+
+#chef .chef-image img:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+/* Chef Details */
+#chef .chef-details h3 {
+  color: gold;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+#chef .chef-details p {
+  color: #eee;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+#chef .chef-details h5 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: gold;
+}
+
+/* Talents List */
+#chef .chef-details ul li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+#chef .chef-details ul li i {
+  margin-right: 8px;
+  color: #28a745;
+  /* green check */
+  font-size: 1.2rem;
+}
+
+/* Animations */
+#chef .chef-image {
+  animation: fadeInLeft 1.5s ease;
+}
+
+#chef .chef-details {
+  animation: fadeInRight 1.5s ease;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #chef {
+    text-align: center;
+    padding: 70px 0;
+  }
+
+  #chef .chef-image {
+    margin-bottom: 25px;
+  }
+}
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #f9a825;
+  /* golden yellow */
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 999;
+}
+
+.scroll-to-top:hover {
+  background-color: #d99400;
+  transform: translateY(-5px);
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Footer Heading Styling */
+.footer-heading {
+  color: gold;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* Add a gold underline effect */
+.footer-heading::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: gold;
+  margin-top: 5px;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+footer p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Animate underline on hover 
+.footer-heading:hover::after {
+  width: 80px;
+}*/

@@ -1,0 +1,93 @@
+/* Contact Section */
+#contact {
+  background: #111; /* Dark background */
+  color: #fff;
+}
+
+#contact .map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+#contact .contact-form {
+  border-radius: 12px;
+}
+
+#contact .form-control {
+  border-radius: 8px;
+  padding: 12px;
+  border: none;
+  background: #222;
+  color: #fff;
+}
+
+#contact .form-control:focus {
+  background: #333;
+  outline: none;
+  box-shadow: 0 0 6px rgba(255, 193, 7, 0.6);
+}
+
+#contact textarea.form-control {
+  resize: none;
+}
+
+#contact button {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px;
+  transition: 0.3s;
+}
+
+#contact button:hover {
+  background: #e0a800;
+  color: #111;
+}
+/* Input & textarea text color */
+#contact .form-control {
+  background-color: #222;   /* dark field */
+  border: 1px solid #444;
+  color: #fff;              /* typed text white */
+}
+
+/* Placeholder text color */
+#contact .form-control::placeholder {
+  color: #bbb;              /* lighter gray for placeholders */
+  opacity: 1;               /* ensure visibility */
+}
+
+/* Focus effect */
+#contact .form-control:focus {
+  border-color: #ffc107;    /* yellow border on focus */
+  box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+}
+
+/* Footer Heading Styling */
+.footer-heading {
+  color: gold;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* Add a gold underline effect */
+.footer-heading::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: gold;
+  margin-top: 5px;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+footer p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,323 @@
+/* ===== SERVICES HEADER (MATCH ABOUT US STYLE) ===== */
+.services-header {
+  position: relative;
+  width: 100%;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../images/Achari Paneer Tikka 8.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  /* Static cinematic feel */
+  overflow: hidden;
+  padding: 120px 20px 80px;
+}
+
+/* Soft dark overlay for contrast */
+.services-header .bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+  animation: shimmer 8s ease-in-out infinite alternate;
+}
+
+/* Text container */
+.services-header .container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInCinematic 2s ease-out forwards;
+}
+
+/* Cinematic text styling */
+.services-header h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  color: #ffcc33;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.services-header p {
+  font-size: 1.25rem;
+  color: #f8f9fa;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Gentle background shimmer (light movement) */
+@keyframes shimmer {
+  from {
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  to {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+/* Smooth fade-in for text */
+@keyframes fadeInCinematic {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Premium Section */
+.premium-section {
+  background: radial-gradient(circle at top left, #111 0%, #000 85%);
+  color: #fff;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+/* Ensure row displays side-by-side */
+.premium-section .row {
+  display: flex;
+  align-items: center;
+}
+
+/* Collage Wrapper */
+.image-collage-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px; /* ensures the column has height */
+}
+
+/* Glow background */
+.image-collage-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(255,193,7,0.25), transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* Collage Container */
+.image-collage {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  z-index: 1;
+}
+
+/* Floating Images */
+.premium-img {
+  position: absolute;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 1.8s ease, box-shadow 1.2s ease;
+  animation: float 6s ease-in-out infinite alternate;
+  object-fit: cover;
+  width: 60%;
+}
+
+.img1 { top: 0%; left: 10%; z-index: 3; animation-delay: 0s; }
+.img2 { top: 45%; left: 5%; z-index: 2; animation-delay: 2s; }
+.img3 { top: 25%; left: 40%; z-index: 1; animation-delay: 4s; }
+
+.premium-img:hover {
+  transform: translateY(-12px) scale(1.05) rotateZ(1deg);
+  box-shadow: 0 15px 35px rgba(255, 193, 7, 0.25);
+}
+
+/* Text column spacing */
+.text-content {
+  padding-left: 40px;
+}
+.heading-white{
+  color: #fff;
+}
+
+/* Floating animation */
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-12px); }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .premium-section .row {
+    flex-direction: column;
+  }
+  .text-content {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+}
+
+
+
+
+
+
+/* ===========================
+   PREMIUM DELIVERY SECTION
+=========================== */
+.delivery-experience-premium {
+  background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+  color: #fff;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.text-gold {
+  color: #ffcc33;
+}
+
+.text-light-muted {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Typewriter Heading */
+.animated-text {
+  display: inline-block;
+  overflow: hidden;
+  /* hide text until typed */
+  white-space: nowrap;
+  /* keep on one line */
+  border-right: 3px solid #ffcc33;
+  /* blinking cursor */
+  width: 0ch;
+  /* start hidden */
+  animation: typing 3s steps(12, end) infinite alternate,
+    /* type and delete */
+    blink 0.8s step-end infinite;
+  /* cursor blink */
+}
+
+/* Typing forward and backward */
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+
+  to {
+    width: 12ch;
+  }
+
+  /* 12 characters in "Fast Delivery" including space */
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Glass Effect Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 0.75rem;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  border-color: #ffcc33;
+  transform: translateY(-6px);
+  color: #ffcc33;
+}
+
+/* Button */
+.btn-gold {
+  background: transparent;
+  border: 2px solid #ffcc33;
+  color: #ffcc33;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: #ffcc33;
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 204, 51, 0.5);
+}
+
+/* Premium Service Cards */
+.service-card-premium {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: all 0.4s ease;
+}
+
+.service-card-premium img {
+  transition: transform 0.6s ease, filter 0.6s ease;
+  width: 100%;
+  object-fit: cover;
+}
+
+.service-overlay-premium {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+  padding: 1rem;
+}
+
+.service-card-premium:hover img {
+  transform: scale(1.15);
+  filter: brightness(0.6);
+}
+
+.service-card-premium:hover .service-overlay-premium {
+  opacity: 1;
+}
+
+/* Decorative Light Glow (Subtle) */
+.delivery-experience-premium::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 204, 51, 0.25) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.delivery-experience-premium::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 204, 51, 0.15) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+}
